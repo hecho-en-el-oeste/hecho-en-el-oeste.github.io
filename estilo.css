@@ -1,0 +1,188 @@
+:root {
+  --papel: #f3ebd9;
+  --papel2: #fff8ea;
+  --tinta: #1b1c24;
+  --gris: #5b5e6b;
+  --rojo: #d7372b;
+  --ambar: #f6c343;
+  --azul: #1f4f9f;
+  --fondo: #23242b;
+  --condensada: "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+  --texto: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--fondo); }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--tinta);
+  font-family: var(--texto);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+a { color: var(--azul); }
+
+.pagina {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+/* ---------- marca ---------- */
+.marca {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--papel);
+}
+.marca .sello {
+  display: inline-block;
+  background: var(--ambar);
+  color: var(--tinta);
+  border: 2px solid var(--tinta);
+  box-shadow: 4px 4px 0 var(--tinta);
+  font-family: var(--condensada);
+  font-weight: 800;
+  letter-spacing: .22em;
+  font-size: 13px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+.marca .nombre {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--condensada);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: .92;
+  font-size: clamp(44px, 11vw, 92px);
+  letter-spacing: -.01em;
+  color: var(--papel);
+  text-shadow: 3px 3px 0 var(--rojo), 6px 6px 0 var(--tinta);
+}
+.bajada {
+  color: #c9c3b5;
+  margin: 18px 0 0;
+  font-size: 18px;
+  max-width: 34em;
+}
+
+/* ---------- boleto ---------- */
+.boleto {
+  background: var(--papel);
+  border: 2px solid var(--tinta);
+  border-radius: 4px;
+  box-shadow: 6px 6px 0 var(--tinta);
+  padding: 24px;
+  margin-top: 36px;
+}
+.boleto .rubro {
+  font-family: var(--condensada);
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--gris);
+  margin: 0;
+}
+.cortado {
+  border: 0;
+  border-top: 2px dashed rgba(27, 28, 36, .4);
+  margin: 16px 0;
+}
+
+.juego {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 28px;
+  align-items: center;
+}
+.juego h2 {
+  font-family: var(--condensada);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: clamp(38px, 8vw, 56px);
+  line-height: .95;
+  margin: 6px 0 12px;
+}
+.juego h2 span { color: var(--rojo); }
+.juego .frase { font-size: 19px; font-weight: 600; margin: 0 0 14px; }
+.juego ul { margin: 0 0 18px; padding-left: 20px; }
+.juego li { margin: 3px 0; }
+
+.estado {
+  display: inline-block;
+  background: var(--tinta);
+  color: var(--ambar);
+  font-family: var(--condensada);
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 3px;
+}
+
+.celu {
+  justify-self: center;
+  width: 100%;
+  max-width: 250px;
+  border: 8px solid var(--tinta);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 6px 6px 0 rgba(27, 28, 36, .35);
+  background: var(--tinta);
+  transform: rotate(2deg);
+}
+.celu img { display: block; width: 100%; height: auto; }
+
+/* ---------- texto largo (privacidad) ---------- */
+.legal h1 {
+  font-family: var(--condensada);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(30px, 6vw, 44px);
+  line-height: 1;
+  margin: 6px 0 6px;
+}
+.legal .fecha { color: var(--gris); margin: 0; font-size: 15px; }
+.legal h2 {
+  font-family: var(--condensada);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-size: 21px;
+  margin: 28px 0 6px;
+}
+.legal p, .legal li { max-width: 44em; }
+.legal ul { padding-left: 22px; }
+.legal li { margin: 5px 0; }
+.nota {
+  background: var(--papel2);
+  border-left: 4px solid var(--ambar);
+  padding: 12px 16px;
+  margin: 16px 0;
+}
+
+/* ---------- pie ---------- */
+.pie {
+  margin-top: 36px;
+  color: #a7a293;
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
+.pie a { color: var(--papel); }
+
+@media (max-width: 680px) {
+  .juego { grid-template-columns: 1fr; }
+  .celu { max-width: 220px; margin-top: 4px; }
+  .boleto { padding: 18px; }
+  .estado { font-size: 13px; letter-spacing: .05em; padding: 8px 12px; }
+}
