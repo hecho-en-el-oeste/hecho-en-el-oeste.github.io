@@ -197,6 +197,34 @@ a { color: var(--azul); }
 }
 .boton-cafe:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--tinta); }
 
+/* ---------- choferes de prueba ---------- */
+.titulo-prueba {
+  font-family: var(--condensada);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 44px;
+  line-height: 1;
+  margin: 10px 0 14px;
+}
+.pasos { margin: 0; padding-left: 26px; }
+.pasos li { margin: 0 0 18px; padding-left: 4px; }
+.pasos li::marker { font-family: var(--condensada); font-weight: 900; color: var(--rojo); }
+.boton-paso {
+  display: table;
+  margin-top: 8px;
+  background: var(--tinta);
+  color: var(--ambar);
+  border-radius: 4px;
+  font-family: var(--condensada);
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 10px 16px;
+}
+.aviso-prueba { margin: 14px 0 0; font-weight: 600; }
+
 /* ---------- pie ---------- */
 .pie {
   margin-top: 36px;
@@ -213,4 +241,6 @@ a { color: var(--azul); }
   .celu { max-width: 220px; margin-top: 4px; }
   .boleto { padding: 18px; }
   .estado { font-size: 13px; letter-spacing: .05em; padding: 8px 12px; }
+  .titulo-prueba { font-size: 34px; }
+  .prueba .celu { display: none; }
 }
